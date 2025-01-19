@@ -14,18 +14,19 @@
 	        container: document.getElementById('dplayer'),
 	        live: true,
 	        autoplay: true,
-		    volume: -1,
-			danmaku: true,
-			/*apiBackend: {
-				read: function (options) {
-					console.log('Pretend to connect WebSocket');
-					options.success([]);
-				},
-				send: function (options) {
-					console.log('Pretend to send danmaku via WebSocket', options.data);
-					options.success();
-				},
-			},*/
+		clickToPause: false,
+		volume: -1,
+		danmaku: true,
+		/*apiBackend: {
+			read: function (options) {
+				console.log('Pretend to connect WebSocket');
+				options.success([]);
+			},
+			send: function (options) {
+				console.log('Pretend to send danmaku via WebSocket', options.data);
+				options.success();
+			},
+		},*/
 	        video: {
 	              type: 'flv',
 	              url: 'https://9d20a36.r8.cpolar.top/live/movie.flv',

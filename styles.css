@@ -67,12 +67,15 @@ input[type="text"] {
 @font-face {
     font-family: 'FontW12G';
     src: url('DFPOP1-W12G.ttf');
+	font-display: swap;
 }
 @font-face {
     font-family: 'Font633';
     src: url('633-CAI978.ttf');
+	font-display: swap;
 }
 @font-face {
     font-family: 'FontCN';
     src: url('Font-CN.ttf');
+	font-display: swap;
 }

@@ -3,34 +3,30 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>甘氏集团直播间</title>
+    <title>甘の直播间</title>
+    <link rel="stylesheet" href="styles.css">
 	<script src = "https://cdnjs.cloudflare.com/ajax/libs/flv.js/1.6.2/flv.min.js"></script>
 </head>
 <body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-block" id="gansoft">GanSoft</div>
+            <div class="navbar-block" id="reset">刷新</div>
+            <div class="navbar-block" id="reset_url">更改url</div>
+        </div>
+    </nav>
+	<dialog id="url-dialog">
+		<form id="url-form">
+			<label for="video-url">视频URL:</label>
+			<input type="text" id="video-url" name="video-url" required>
+			<button type="button" id="restore-default">恢复默认</button>
+			<button type="submit">保存更改</button>
+			<button type="button" id="close-dialog">关闭</button>
+		</form>
+	</dialog>
+	
 	<div id="dplayer"></div>
 	<script src="DPlayer.min.js"></script>
-	<script>
-	    const dp = new DPlayer({
-	        container: document.getElementById('dplayer'),
-	        live: true,
-	        autoplay: true,
-		clickToPause: false,
-		/*danmaku: true,
-		apiBackend: {
-			read: function (options) {
-				console.log('Pretend to connect WebSocket');
-				options.success([]);
-			},
-			send: function (options) {
-				console.log('Pretend to send danmaku via WebSocket', options.data);
-				options.success();
-			},
-		},*/
-	        video: {
-	              type: 'flv',
-	              url: 'https://9d20a36.r8.cpolar.top/live/movie.flv',
-	        },
-	    });
-	</script>
+	<script src="script.js"></script>
 </body>
 </html>

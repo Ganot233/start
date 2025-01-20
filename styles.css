@@ -1,0 +1,78 @@
+.navbar {
+    background-image: linear-gradient(to right, #274688, #66e4dc);
+    border-bottom: 2px solid rgb(101, 199, 230);
+    box-shadow: 0 2px 12px rgba(72, 255, 237, 0.5); 
+    color: white;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 128;
+}
+.navbar-block {
+    font-size: 24px;
+    margin: 0;
+    font-family:'FontCN';
+}
+#gansoft {
+    font-family:'FontW12G';
+}
+.container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+dialog {
+    border: none;
+    box-shadow: 0 15px 30px rgba(72, 255, 237, 0.5); 
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    background-color: #00eeff55;
+    max-width: 90%;
+    width: 500px;
+    font-family:'FontCN';
+}
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    font-family:'FontCN';
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+button:hover {
+    background-color: #0056b3;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input[type="text"] {
+    font-family:'FontW12G';
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+@font-face {
+    font-family: 'FontW12G';
+    src: url('DFPOP1-W12G.ttf');
+}
+@font-face {
+    font-family: 'Font633';
+    src: url('633-CAI978.ttf');
+}
+@font-face {
+    font-family: 'FontCN';
+    src: url('Font-CN.ttf');
+}

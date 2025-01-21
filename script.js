@@ -1,6 +1,6 @@
 const defaultUrl = 'https://9d20a36.r8.cpolar.top/live/movie.flv';
 var currentUrl = defaultUrl;
-const dp = new DPlayer({
+dp = new DPlayer({
     container: document.getElementById('dplayer'),
     live: true,
     autoplay: true,
@@ -23,11 +23,18 @@ const dp = new DPlayer({
 });
 document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('reset').addEventListener('click', function () {
-        dp.switchVideo({
-            type: 'auto',
-            url: currentUrl,
-        });
-        dp.play();
+		dp.pause();
+		dp.destroy();
+		dp = new DPlayer({
+			container: document.getElementById('dplayer'),
+			live: true,
+			autoplay: true,
+			clickToPause: false,
+			video: {
+				type: 'auto',
+				url: defaultUrl,
+			},
+		});
     });
     document.getElementById('reset_url').addEventListener('click', function() {
         document.getElementById('url-dialog').showModal();
@@ -36,11 +43,18 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('url-form').addEventListener('submit', function(event) {
         event.preventDefault();
         var newUrl = document.getElementById('video-url').value;
-        dp.switchVideo({
-            type: 'auto',
-            url: newUrl,
-        });
-        dp.play();
+		dp.pause();
+		dp.destroy();
+		dp = new DPlayer({
+			container: document.getElementById('dplayer'),
+			live: true,
+			autoplay: true,
+			clickToPause: false,
+			video: {
+				type: 'auto',
+				url: newUrl,
+			},
+		});
         currentUrl = newUrl;
         document.getElementById('url-dialog').close();
     });
